@@ -18,22 +18,22 @@ matrix:
     - os: linux
       compiler: gcc
       env:
-        - COMPILER=g++
+        - COMPILER=g++-9
         - CXXFLAGS=-std=c++1z
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test']
-          packages: ['g++', 'ninja-build']
+          packages: ['g++-9', 'ninja-build']
 
     - os: linux
       compiler: clang
       env:
-        - COMPILER=clang++
+        - COMPILER=clang++-7
         - CXXFLAGS=-std=c++1z
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-trusty-7']
-          packages: ['clang', 'ninja-build']
+          packages: ['clang-7', 'ninja-build']
 
 ################
 # build script #
